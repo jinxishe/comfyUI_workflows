@@ -6,8 +6,8 @@
       "id": 100,
       "type": "Note",
       "pos": [
-        590,
-        330
+        330,
+        310
       ],
       "size": {
         "0": 256.5124206542969,
@@ -29,8 +29,8 @@
       "id": 102,
       "type": "ShowText|pysssss",
       "pos": [
-        -2074.470102559836,
-        1375.293354915777
+        -2480,
+        1290
       ],
       "size": {
         "0": 770,
@@ -72,8 +72,8 @@
       "id": 104,
       "type": "Text Multiline",
       "pos": [
-        -2074.470102559836,
-        1735.293354915777
+        -2480,
+        1650
       ],
       "size": {
         "0": 760,
@@ -105,8 +105,8 @@
       "id": 101,
       "type": "😀 LLMs_Chat",
       "pos": [
-        -2904.4701025598356,
-        1155.293354915777
+        -3310,
+        1070
       ],
       "size": {
         "0": 790,
@@ -142,8 +142,8 @@
       "id": 109,
       "type": "ttN text3BOX_3WAYconcat",
       "pos": [
-        -1254.4701025598356,
-        1145.293354915777
+        -1660,
+        1060
       ],
       "size": {
         "0": 300,
@@ -240,8 +240,8 @@
       "id": 110,
       "type": "ShowText|pysssss",
       "pos": [
-        -1263.2010493999023,
-        1437.7189458504643
+        -1670,
+        1350
       ],
       "size": {
         "0": 660,
@@ -283,8 +283,8 @@
       "id": 103,
       "type": "Text Multiline",
       "pos": [
-        -2074.470102559836,
-        1155.293354915777
+        -2480,
+        1070
       ],
       "size": {
         "0": 780,
@@ -460,53 +460,11 @@
       ]
     },
     {
-      "id": 115,
-      "type": "ShowText|pysssss",
-      "pos": [
-        -520,
-        950
-      ],
-      "size": {
-        "0": 530,
-        "1": 680
-      },
-      "flags": {},
-      "order": 77,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 245,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 6
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ShowText|pysssss"
-      },
-      "widgets_values": [
-        [
-          "Professional analog film photo,Fashion photography,cinematic lighting,Movie Still,photorealistic,masterpiece,realistic,hyper realistic,high fashion photography of a curvy a naked beautiful young woman,extremely huge plump (sagging soft:1.3) breasts,as a ((firefighter)) with ((ringlets hair)) Donning grunge wear,with flannels and combat boots,reflecting rebellion.,industrial setting,nighttime,artificial lighting,parking area,seated,arm raised,head tilted,eye-level shot,natural lighting,shallow depth of field,beneath the city in the techno catacombs,projection lighting,rim light,iridescent accents,rule of thirds,soft lighting,(slightly above:1.5),shot on FujiFilm X-T4 with Fujinon XF 35mm f-2 R WR,photo by Marta Bevacqua "
-        ],
-        "muted color,Low saturation and low contrast,Abundant shadow details,portrait photography of a beautiful young woman,extremely huge (sagging soft:1.3) breasts,wearing a veil,a delicate piece of fabric that adds mystery and allure,often seen in bridal or ceremonial attire,dressed in white off-shoulder top,white shorts,textured fabric,ruffled sleeves,indoor setting,green plants,dark couch,tiled floor,bright lighting,sitting,facing away,relaxed posture,Eye-level shot,straight angle,centered subject,in a enchanted forest with talking animals and magical creatures,detailed skin pores,rokoko,(fisheyes view:1.4),shot on Pentax 645Z with Pentax-D FA 645 55mm f-2.8,photo by Olive Cotton"
-      ]
-    },
-    {
       "id": 96,
       "type": "Note",
       "pos": [
-        330,
-        -810
+        280,
+        -840
       ],
       "size": {
         "0": 210,
@@ -528,8 +486,8 @@
       "id": 60,
       "type": "CR Pipe Switch",
       "pos": [
-        330,
-        -560
+        280,
+        -590
       ],
       "size": {
         "0": 220,
@@ -586,8 +544,8 @@
       "id": 170,
       "type": "MaskPreview+",
       "pos": [
-        4670,
-        650
+        4110,
+        610
       ],
       "size": {
         "0": 210,
@@ -611,8 +569,8 @@
       "id": 171,
       "type": "ToBasicPipe",
       "pos": [
-        4670,
-        480
+        4110,
+        440
       ],
       "size": {
         "0": 230,
@@ -667,8 +625,8 @@
       "id": 126,
       "type": "CR Module Input",
       "pos": [
-        4660,
-        200
+        4100,
+        160
       ],
       "size": {
         "0": 220,
@@ -777,8 +735,8 @@
       "id": 167,
       "type": "Florence2",
       "pos": [
-        4300,
-        210
+        3740,
+        170
       ],
       "size": {
         "0": 320,
@@ -837,8 +795,8 @@
       "id": 174,
       "type": "Image Comparer (rgthree)",
       "pos": {
-        "0": 4680,
-        "1": 1000,
+        "0": 4120,
+        "1": 960,
         "2": 0,
         "3": 0,
         "4": 0,
@@ -936,45 +894,11 @@
       ]
     },
     {
-      "id": 142,
-      "type": "LoadFlorence2Model",
-      "pos": [
-        580,
-        180
-      ],
-      "size": {
-        "0": 240,
-        "1": 60
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "FLORENCE2",
-          "type": "FLORENCE2",
-          "links": [
-            357,
-            385,
-            427
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadFlorence2Model"
-      },
-      "widgets_values": [
-        "large"
-      ]
-    },
-    {
       "id": 155,
       "type": "GrowMaskWithBlur",
       "pos": [
-        2580,
-        580
+        2180,
+        530
       ],
       "size": {
         "0": 320,
@@ -1026,8 +950,8 @@
       "id": 160,
       "type": "CLIPTextEncode",
       "pos": [
-        2580,
-        870
+        2180,
+        820
       ],
       "size": {
         "0": 330,
@@ -1065,8 +989,8 @@
       "id": 161,
       "type": "CLIPTextEncode",
       "pos": [
-        2590,
-        990
+        2190,
+        940
       ],
       "size": {
         "0": 340,
@@ -1104,8 +1028,8 @@
       "id": 156,
       "type": "PreviewImage",
       "pos": [
-        2590,
-        1150
+        2190,
+        1100
       ],
       "size": {
         "0": 330,
@@ -1129,8 +1053,8 @@
       "id": 158,
       "type": "CR Module Input",
       "pos": [
-        2940,
-        200
+        2540,
+        150
       ],
       "size": {
         "0": 270,
@@ -1238,8 +1162,8 @@
       "id": 154,
       "type": "Florence2Postprocess",
       "pos": [
-        2580,
-        360
+        2180,
+        310
       ],
       "size": {
         "0": 340,
@@ -1325,8 +1249,8 @@
       "id": 159,
       "type": "ToBasicPipe",
       "pos": [
-        2940,
-        480
+        2540,
+        430
       ],
       "size": {
         "0": 230,
@@ -1381,8 +1305,8 @@
       "id": 165,
       "type": "Image Comparer (rgthree)",
       "pos": {
-        "0": 3010,
-        "1": 1000,
+        "0": 2610,
+        "1": 950,
         "2": 0,
         "3": 0,
         "4": 0,
@@ -1436,8 +1360,8 @@
       "id": 183,
       "type": "PreviewImage",
       "pos": [
-        3790,
-        1180
+        3390,
+        1130
       ],
       "size": {
         "0": 260,
@@ -1461,8 +1385,8 @@
       "id": 163,
       "type": "MaskPreview+",
       "pos": [
-        2950,
-        640
+        2550,
+        590
       ],
       "size": [
         230,
@@ -1486,8 +1410,8 @@
       "id": 180,
       "type": "ImageCrop+",
       "pos": [
-        2600,
-        1490
+        2200,
+        1440
       ],
       "size": {
         "0": 210,
@@ -1575,8 +1499,8 @@
       "id": 182,
       "type": "PreviewImage",
       "pos": [
-        2600,
-        1550
+        2200,
+        1500
       ],
       "size": {
         "0": 280,
@@ -1600,8 +1524,8 @@
       "id": 169,
       "type": "GrowMaskWithBlur",
       "pos": [
-        4310,
-        590
+        3750,
+        550
       ],
       "size": {
         "0": 320,
@@ -1653,8 +1577,8 @@
       "id": 121,
       "type": "CLIPTextEncode",
       "pos": [
-        4310,
-        890
+        3750,
+        850
       ],
       "size": {
         "0": 310,
@@ -1692,8 +1616,8 @@
       "id": 175,
       "type": "PreviewImage",
       "pos": [
-        4310,
-        1040
+        3750,
+        1000
       ],
       "size": {
         "0": 310,
@@ -1717,8 +1641,8 @@
       "id": 164,
       "type": "MaskDetailerPipe",
       "pos": [
-        3220,
-        200
+        2820,
+        150
       ],
       "size": [
         540,
@@ -1834,8 +1758,8 @@
       "id": 168,
       "type": "Florence2Postprocess",
       "pos": [
-        4300,
-        370
+        3740,
+        330
       ],
       "size": {
         "0": 340,
@@ -1921,8 +1845,8 @@
       "id": 185,
       "type": "ImageCrop+",
       "pos": [
-        4310,
-        1360
+        3750,
+        1320
       ],
       "size": {
         "0": 310,
@@ -2008,8 +1932,8 @@
       "id": 186,
       "type": "PreviewImage",
       "pos": [
-        4320,
-        1600
+        3760,
+        1560
       ],
       "size": {
         "0": 300,
@@ -2033,8 +1957,8 @@
       "id": 172,
       "type": "MaskDetailerPipe",
       "pos": [
-        4930,
-        200
+        4370,
+        160
       ],
       "size": {
         "0": 540,
@@ -2146,8 +2070,8 @@
       "id": 187,
       "type": "PreviewImage",
       "pos": [
-        5490,
-        1170
+        4930,
+        1130
       ],
       "size": {
         "0": 270,
@@ -2179,7 +2103,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -2203,8 +2127,8 @@
       "id": 193,
       "type": "CR Split String",
       "pos": [
-        850,
-        -1310
+        280,
+        -1340
       ],
       "size": {
         "0": 220,
@@ -2270,8 +2194,8 @@
       "id": 196,
       "type": "ShowText|pysssss",
       "pos": [
-        1100,
-        -1320
+        530,
+        -1350
       ],
       "size": {
         "0": 390,
@@ -2313,8 +2237,8 @@
       "id": 218,
       "type": "CR Text Concatenate",
       "pos": [
-        1990,
-        -1170
+        1420,
+        -1200
       ],
       "size": {
         "0": 260,
@@ -2371,8 +2295,8 @@
       "id": 203,
       "type": "CR Float To String",
       "pos": [
-        1530,
-        -1320
+        960,
+        -1350
       ],
       "size": {
         "0": 250,
@@ -2421,8 +2345,8 @@
       "id": 216,
       "type": "CR Text Concatenate",
       "pos": [
-        1520,
-        -1170
+        950,
+        -1200
       ],
       "size": {
         "0": 320,
@@ -2481,8 +2405,8 @@
       "id": 201,
       "type": "CR Text Replace",
       "pos": [
-        1510,
-        -1110
+        940,
+        -1140
       ],
       "size": {
         "0": 220,
@@ -2559,8 +2483,8 @@
       "id": 209,
       "type": "CR Text Replace",
       "pos": [
-        1750,
-        -1110
+        1180,
+        -1140
       ],
       "size": {
         "0": 220,
@@ -2637,8 +2561,8 @@
       "id": 224,
       "type": "String Replace (mtb)",
       "pos": [
-        1990,
-        -1010
+        1420,
+        -1040
       ],
       "size": {
         "0": 240,
@@ -2689,8 +2613,8 @@
       "id": 57,
       "type": "SimpleMath+",
       "pos": [
-        600,
-        -600
+        540,
+        -630
       ],
       "size": {
         "0": 280,
@@ -2743,8 +2667,8 @@
       "id": 58,
       "type": "SimpleMath+",
       "pos": [
-        600,
-        -480
+        540,
+        -510
       ],
       "size": {
         "0": 280,
@@ -2797,8 +2721,8 @@
       "id": 54,
       "type": "PreviewImage",
       "pos": [
-        1500,
-        -810
+        1440,
+        -840
       ],
       "size": {
         "0": 790,
@@ -2822,8 +2746,8 @@
       "id": 116,
       "type": "PromptGenerator",
       "pos": [
-        -1010,
-        2090
+        -1410,
+        1970
       ],
       "size": {
         "0": 410,
@@ -2918,15 +2842,15 @@
       "id": 228,
       "type": "Text Multiline",
       "pos": [
-        -1440,
-        2100
+        -1840,
+        1980
       ],
       "size": {
         "0": 400,
         "1": 200
       },
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "outputs": [
         {
@@ -2951,15 +2875,15 @@
       "id": 10,
       "type": "Text Multiline",
       "pos": [
-        -2900,
-        500
+        -1870,
+        470
       ],
       "size": {
         "0": 860,
         "1": 300
       },
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "outputs": [
         {
@@ -2984,8 +2908,8 @@
       "id": 59,
       "type": "CR Module Input",
       "pos": [
-        610,
-        -350
+        550,
+        -380
       ],
       "size": {
         "0": 220,
@@ -3097,8 +3021,8 @@
       "id": 166,
       "type": "SDPromptSaver",
       "pos": [
-        3800,
-        210
+        3400,
+        160
       ],
       "size": {
         "0": 250,
@@ -3245,8 +3169,8 @@
       "id": 127,
       "type": "SDPromptSaver",
       "pos": [
-        5510,
-        210
+        4950,
+        170
       ],
       "size": {
         "0": 250,
@@ -3482,15 +3406,15 @@
       "id": 11,
       "type": "Text Multiline",
       "pos": [
-        -2890,
-        850
+        -1860,
+        820
       ],
       "size": {
         "0": 860,
         "1": 130
       },
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "outputs": [
         {
@@ -3512,104 +3436,18 @@
       ]
     },
     {
-      "id": 112,
-      "type": "CR Text Input Switch (4 way)",
-      "pos": [
-        -510,
-        780
-      ],
-      "size": {
-        "0": 370,
-        "1": 120
-      },
-      "flags": {},
-      "order": 70,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text1",
-          "type": "STRING",
-          "link": 353,
-          "widget": {
-            "name": "text1"
-          }
-        },
-        {
-          "name": "text2",
-          "type": "STRING",
-          "link": 354,
-          "widget": {
-            "name": "text2"
-          }
-        },
-        {
-          "name": "text3",
-          "type": "STRING",
-          "link": 355,
-          "widget": {
-            "name": "text3"
-          }
-        },
-        {
-          "name": "text4",
-          "type": "STRING",
-          "link": 525,
-          "widget": {
-            "name": "text4"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            245,
-            526,
-            527,
-            528,
-            529,
-            530,
-            531
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "show_help",
-          "type": "STRING",
-          "links": [],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "title": "Positive Prompt Switch",
-      "properties": {
-        "Node name for S&R": "CR Text Input Switch (4 way)"
-      },
-      "widgets_values": [
-        4,
-        "",
-        "",
-        "",
-        ""
-      ],
-      "color": "#149414",
-      "bgcolor": "#008000"
-    },
-    {
       "id": 62,
       "type": "DF_Integer",
       "pos": [
-        330,
-        -670
+        280,
+        -700
       ],
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "outputs": [
         {
@@ -3636,15 +3474,15 @@
       "id": 56,
       "type": "ImpactFloat",
       "pos": [
-        600,
-        -700
+        540,
+        -730
       ],
       "size": {
         "0": 280,
         "1": 60
       },
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "outputs": [
         {
@@ -3682,7 +3520,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "outputs": [
         {
@@ -3763,7 +3601,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "outputs": [
         {
@@ -4017,85 +3855,18 @@
       ]
     },
     {
-      "id": 231,
-      "type": "CR Text Input Switch",
-      "pos": [
-        -120,
-        780
-      ],
-      "size": {
-        "0": 280,
-        "1": 80
-      },
-      "flags": {},
-      "order": 43,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text1",
-          "type": "STRING",
-          "link": 538,
-          "widget": {
-            "name": "text1"
-          }
-        },
-        {
-          "name": "text2",
-          "type": "STRING",
-          "link": 539,
-          "widget": {
-            "name": "text2"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            540,
-            541,
-            542,
-            543,
-            544,
-            545,
-            546
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "show_help",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Negative Prompt Switch",
-      "properties": {
-        "Node name for S&R": "CR Text Input Switch"
-      },
-      "widgets_values": [
-        1,
-        "",
-        ""
-      ],
-      "color": "#149414",
-      "bgcolor": "#008000"
-    },
-    {
       "id": 87,
       "type": "VAELoader",
       "pos": [
         -60,
-        220
+        200
       ],
       "size": {
         "0": 320,
         "1": 60
       },
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "outputs": [
         {
@@ -4119,8 +3890,8 @@
       "id": 211,
       "type": "CR Integer To String",
       "pos": [
-        1520,
-        -1270
+        950,
+        -1300
       ],
       "size": {
         "0": 320,
@@ -4169,15 +3940,15 @@
       "id": 238,
       "type": "Primitive integer [Crystools]",
       "pos": [
-        890,
-        -810
+        830,
+        -840
       ],
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "outputs": [
         {
@@ -4205,8 +3976,8 @@
       "id": 213,
       "type": "CR Float To String",
       "pos": [
-        1520,
-        -1220
+        950,
+        -1250
       ],
       "size": {
         "0": 320,
@@ -4255,15 +4026,15 @@
       "id": 239,
       "type": "Primitive float [Crystools]",
       "pos": [
-        890,
-        -700
+        830,
+        -730
       ],
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "outputs": [
         {
@@ -4291,15 +4062,15 @@
       "id": 240,
       "type": "Primitive float [Crystools]",
       "pos": [
-        890,
-        -590
+        830,
+        -620
       ],
       "size": {
         "0": 210,
         "1": 70
       },
       "flags": {},
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "outputs": [
         {
@@ -4327,8 +4098,8 @@
       "id": 226,
       "type": "CR Float To String",
       "pos": [
-        1770,
-        -1180
+        1200,
+        -1210
       ],
       "size": {
         "0": 320,
@@ -4377,15 +4148,15 @@
       "id": 197,
       "type": "SekiSamplerSelector",
       "pos": [
-        850,
-        -350
+        790,
+        -380
       ],
       "size": {
         "0": 250,
         "1": 140
       },
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "outputs": [
         {
@@ -4440,15 +4211,15 @@
       "id": 202,
       "type": "Upscale Model Loader",
       "pos": [
-        600,
-        -820
+        540,
+        -850
       ],
       "size": {
         "0": 270,
         "1": 80
       },
       "flags": {},
-      "order": 20,
+      "order": 19,
       "mode": 0,
       "outputs": [
         {
@@ -4481,15 +4252,15 @@
       "id": 279,
       "type": "StringConstant",
       "pos": [
-        300,
-        -1440
+        -270,
+        -1470
       ],
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "outputs": [
         {
@@ -4515,8 +4286,8 @@
       "id": 263,
       "type": "SDParameterExtractor",
       "pos": [
-        300,
-        -1340
+        -270,
+        -1370
       ],
       "size": {
         "0": 260,
@@ -4562,8 +4333,8 @@
       "id": 270,
       "type": "ShowText|pysssss",
       "pos": [
-        300,
-        -1140
+        -270,
+        -1170
       ],
       "size": {
         "0": 210,
@@ -4605,8 +4376,8 @@
       "id": 277,
       "type": "ShowText|pysssss",
       "pos": [
-        300,
-        -1010
+        -270,
+        -1040
       ],
       "size": {
         "0": 210,
@@ -4648,8 +4419,8 @@
       "id": 269,
       "type": "TextSplit",
       "pos": [
-        580,
-        -1440
+        10,
+        -1470
       ],
       "size": {
         "0": 210,
@@ -4702,8 +4473,8 @@
       "id": 276,
       "type": "TextSplit",
       "pos": [
-        580,
-        -1290
+        10,
+        -1320
       ],
       "size": {
         "0": 210,
@@ -4755,7 +4526,7 @@
       "id": 135,
       "type": "SDPromptReader",
       "pos": [
-        -1440,
+        -1340,
         -850
       ],
       "size": {
@@ -4763,7 +4534,7 @@
         "1": 1210
       },
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4906,8 +4677,8 @@
       "id": 76,
       "type": "CR Pipe Switch",
       "pos": [
-        600,
-        580
+        340,
+        560
       ],
       "size": {
         "0": 220,
@@ -4964,8 +4735,8 @@
       "id": 53,
       "type": "UltimateSDUpscale",
       "pos": [
-        1120,
-        -810
+        1060,
+        -840
       ],
       "size": {
         "0": 360,
@@ -5108,49 +4879,11 @@
       ]
     },
     {
-      "id": 280,
-      "type": "Reroute",
-      "pos": [
-        590,
-        110
-      ],
-      "size": [
-        100,
-        26
-      ],
-      "flags": {},
-      "order": 101,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 622
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            624,
-            625
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Image After Hires.fix",
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
       "id": 85,
       "type": "CLIPTextEncode",
       "pos": [
         -530,
-        390
+        370
       ],
       "size": {
         "0": 320,
@@ -5199,15 +4932,15 @@
       "id": 82,
       "type": "Constant Number",
       "pos": [
-        590,
-        1000
+        330,
+        980
       ],
       "size": {
         "0": 260,
         "1": 120
       },
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 4,
       "inputs": [
         {
@@ -5260,7 +4993,7 @@
       "type": "CR Module Pipe Loader",
       "pos": [
         -50,
-        320
+        300
       ],
       "size": {
         "0": 290,
@@ -5350,8 +5083,8 @@
       "id": 55,
       "type": "SDPromptSaver",
       "pos": [
-        2310,
-        -820
+        2250,
+        -850
       ],
       "size": {
         "0": 330,
@@ -5522,8 +5255,8 @@
       "id": 275,
       "type": "CR String To Combo",
       "pos": [
-        540,
-        -1140
+        -30,
+        -1170
       ],
       "size": {
         "0": 250,
@@ -5576,8 +5309,8 @@
       "id": 278,
       "type": "CR String To Combo",
       "pos": [
-        540,
-        -1040
+        -30,
+        -1070
       ],
       "size": {
         "0": 250,
@@ -5630,15 +5363,15 @@
       "id": 93,
       "type": "Logic Boolean",
       "pos": [
-        590,
-        700
+        330,
+        680
       ],
       "size": {
         "0": 210,
         "1": 80
       },
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 4,
       "outputs": [
         {
@@ -5672,8 +5405,8 @@
       "id": 143,
       "type": "Florence2",
       "pos": [
-        1190,
-        200
+        910,
+        150
       ],
       "size": {
         "0": 290,
@@ -5732,15 +5465,15 @@
       "id": 81,
       "type": "Constant Number",
       "pos": [
-        590,
-        830
+        330,
+        810
       ],
       "size": {
         "0": 250,
         "1": 120
       },
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 4,
       "inputs": [
         {
@@ -5792,8 +5525,8 @@
       "id": 151,
       "type": "ToBasicPipe",
       "pos": [
-        1200,
-        360
+        920,
+        310
       ],
       "size": {
         "0": 230,
@@ -5850,8 +5583,8 @@
       "id": 84,
       "type": "CLIPTextEncode",
       "pos": [
-        960,
-        520
+        680,
+        470
       ],
       "size": {
         "0": 460,
@@ -5895,8 +5628,8 @@
       "id": 144,
       "type": "Florence2Postprocess",
       "pos": [
-        950,
-        700
+        670,
+        650
       ],
       "size": {
         "0": 340,
@@ -5982,8 +5715,8 @@
       "id": 146,
       "type": "GrowMaskWithBlur",
       "pos": [
-        950,
-        920
+        670,
+        870
       ],
       "size": {
         "0": 320,
@@ -6035,8 +5768,8 @@
       "id": 152,
       "type": "PreviewImage",
       "pos": [
-        950,
-        1210
+        670,
+        1160
       ],
       "size": {
         "0": 280,
@@ -6060,8 +5793,8 @@
       "id": 176,
       "type": "ImageCrop+",
       "pos": [
-        950,
-        1530
+        670,
+        1480
       ],
       "size": [
         210,
@@ -6147,8 +5880,8 @@
       "id": 150,
       "type": "Image Comparer (rgthree)",
       "pos": {
-        "0": 1560,
-        "1": 1070,
+        "0": 1280,
+        "1": 1020,
         "2": 0,
         "3": 0,
         "4": 0,
@@ -6202,15 +5935,15 @@
       "id": 199,
       "type": "Text Multiline",
       "pos": [
-        860,
-        -1120
+        290,
+        -1150
       ],
       "size": {
         "0": 630,
         "1": 190
       },
       "flags": {},
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "outputs": [
         {
@@ -6234,8 +5967,8 @@
       "id": 149,
       "type": "CR Module Input",
       "pos": [
-        960,
-        210
+        680,
+        160
       ],
       "size": {
         "0": 220,
@@ -6355,7 +6088,7 @@
         "1": 120
       },
       "flags": {},
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "outputs": [
         {
@@ -6402,14 +6135,14 @@
       "type": "Checkpoint Loader (Simple)",
       "pos": [
         -540,
-        220
+        200
       ],
       "size": {
         "0": 460,
         "1": 120
       },
       "flags": {},
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "outputs": [
         {
@@ -6459,8 +6192,8 @@
       "id": 80,
       "type": "Number Input Switch",
       "pos": [
-        590,
-        1170
+        330,
+        1150
       ],
       "size": {
         "0": 260,
@@ -6519,15 +6252,15 @@
       "id": 283,
       "type": "Text Multiline",
       "pos": [
-        950,
-        2020
+        650,
+        1980
       ],
       "size": {
         "0": 630,
         "1": 190
       },
       "flags": {},
-      "order": 29,
+      "order": 28,
       "mode": 4,
       "outputs": [
         {
@@ -6552,15 +6285,15 @@
       "id": 235,
       "type": "Primitive float [Crystools]",
       "pos": [
-        1300,
-        800
+        1020,
+        750
       ],
       "size": {
         "0": 220,
         "1": 60
       },
       "flags": {},
-      "order": 30,
+      "order": 29,
       "mode": 4,
       "outputs": [
         {
@@ -6588,15 +6321,15 @@
       "id": 245,
       "type": "SekiSamplerSelector(Detailer)",
       "pos": [
-        1290,
-        920
+        1010,
+        870
       ],
       "size": {
         "0": 250,
         "1": 140
       },
       "flags": {},
-      "order": 31,
+      "order": 30,
       "mode": 4,
       "outputs": [
         {
@@ -6651,15 +6384,15 @@
       "id": 83,
       "type": "DF_Integer",
       "pos": [
-        590,
-        470
+        330,
+        450
       ],
       "size": {
         "0": 250,
         "1": 60
       },
       "flags": {},
-      "order": 32,
+      "order": 31,
       "mode": 4,
       "outputs": [
         {
@@ -6687,8 +6420,8 @@
       "id": 73,
       "type": "SDPromptSaver",
       "pos": [
-        2110,
-        210
+        1830,
+        160
       ],
       "size": [
         260,
@@ -6859,8 +6592,8 @@
       "id": 284,
       "type": "CR Text Replace",
       "pos": [
-        960,
-        2260
+        660,
+        2220
       ],
       "size": [
         220,
@@ -6937,8 +6670,8 @@
       "id": 289,
       "type": "CR Text Replace",
       "pos": [
-        1200,
-        2260
+        900,
+        2220
       ],
       "size": [
         220,
@@ -7015,8 +6748,8 @@
       "id": 230,
       "type": "Text Multiline",
       "pos": [
-        -1960,
-        590
+        -950,
+        550
       ],
       "size": [
         360,
@@ -7055,8 +6788,8 @@
       "id": 229,
       "type": "Text Multiline",
       "pos": [
-        -1960,
-        500
+        -950,
+        460
       ],
       "size": [
         350,
@@ -7098,8 +6831,8 @@
       "id": 286,
       "type": "CR Text Input Switch",
       "pos": [
-        590,
-        1290
+        330,
+        1270
       ],
       "size": [
         290,
@@ -7165,8 +6898,8 @@
       "id": 147,
       "type": "MaskPreview+",
       "pos": [
-        1290,
-        1120
+        1010,
+        1070
       ],
       "size": {
         "0": 210,
@@ -7190,8 +6923,8 @@
       "id": 178,
       "type": "PreviewImage",
       "pos": [
-        1250,
-        1420
+        970,
+        1370
       ],
       "size": {
         "0": 260,
@@ -7215,8 +6948,8 @@
       "id": 148,
       "type": "MaskDetailerPipe",
       "pos": [
-        1550,
-        210
+        1270,
+        160
       ],
       "size": {
         "0": 540,
@@ -7372,8 +7105,8 @@
       "id": 219,
       "type": "ShowText|pysssss",
       "pos": [
-        2260,
-        -1230
+        1690,
+        -1260
       ],
       "size": {
         "0": 380,
@@ -7416,8 +7149,8 @@
       "id": 153,
       "type": "Florence2",
       "pos": [
-        2590,
-        200
+        2190,
+        150
       ],
       "size": {
         "0": 320,
@@ -7476,15 +7209,15 @@
       "id": 234,
       "type": "DF_Integer",
       "pos": [
-        1300,
-        700
+        1020,
+        650
       ],
       "size": {
         "0": 220,
         "1": 60
       },
       "flags": {},
-      "order": 33,
+      "order": 32,
       "mode": 4,
       "outputs": [
         {
@@ -7512,8 +7245,8 @@
       "id": 292,
       "type": "CR Text Concatenate",
       "pos": [
-        1600,
-        2030
+        1300,
+        1990
       ],
       "size": [
         260,
@@ -7570,8 +7303,8 @@
       "id": 287,
       "type": "CR Float To String",
       "pos": [
-        1440,
-        2260
+        1140,
+        2220
       ],
       "size": [
         320,
@@ -7620,8 +7353,8 @@
       "id": 288,
       "type": "CR Integer To String",
       "pos": [
-        1440,
-        2310
+        1140,
+        2270
       ],
       "size": [
         320,
@@ -7670,8 +7403,8 @@
       "id": 290,
       "type": "CR Float To String",
       "pos": [
-        1440,
-        2360
+        1140,
+        2320
       ],
       "size": [
         320,
@@ -7720,8 +7453,8 @@
       "id": 294,
       "type": "ShowText|pysssss",
       "pos": [
-        1650,
-        2240
+        1350,
+        2200
       ],
       "size": [
         750,
@@ -7763,8 +7496,8 @@
       "id": 291,
       "type": "ShowText|pysssss",
       "pos": [
-        1880,
-        2020
+        1580,
+        1980
       ],
       "size": [
         530,
@@ -7800,6 +7533,273 @@
       "widgets_values": [
         "",
         "Face Detailer Info: Face Detailer Model: leosamsHelloworldXL_helloworldXL70, Face Detailer denoise:0.5, Face Detailer steps: 25, Face Detailer CFG: 7.0, Face Detailer Sampler: dpmpp_2m_karras"
+      ]
+    },
+    {
+      "id": 112,
+      "type": "CR Text Input Switch (4 way)",
+      "pos": [
+        -930,
+        740
+      ],
+      "size": [
+        260,
+        120
+      ],
+      "flags": {},
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text1",
+          "type": "STRING",
+          "link": 353,
+          "widget": {
+            "name": "text1"
+          }
+        },
+        {
+          "name": "text2",
+          "type": "STRING",
+          "link": 354,
+          "widget": {
+            "name": "text2"
+          }
+        },
+        {
+          "name": "text3",
+          "type": "STRING",
+          "link": 355,
+          "widget": {
+            "name": "text3"
+          }
+        },
+        {
+          "name": "text4",
+          "type": "STRING",
+          "link": 525,
+          "widget": {
+            "name": "text4"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            245,
+            526,
+            527,
+            528,
+            529,
+            530,
+            531
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Positive Prompt Switch",
+      "properties": {
+        "Node name for S&R": "CR Text Input Switch (4 way)"
+      },
+      "widgets_values": [
+        4,
+        "",
+        "",
+        "",
+        ""
+      ],
+      "color": "#149414",
+      "bgcolor": "#008000"
+    },
+    {
+      "id": 231,
+      "type": "CR Text Input Switch",
+      "pos": [
+        -650,
+        750
+      ],
+      "size": [
+        260,
+        80
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text1",
+          "type": "STRING",
+          "link": 538,
+          "widget": {
+            "name": "text1"
+          }
+        },
+        {
+          "name": "text2",
+          "type": "STRING",
+          "link": 539,
+          "widget": {
+            "name": "text2"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            540,
+            541,
+            542,
+            543,
+            544,
+            545,
+            546
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Negative Prompt Switch",
+      "properties": {
+        "Node name for S&R": "CR Text Input Switch"
+      },
+      "widgets_values": [
+        1,
+        "",
+        ""
+      ],
+      "color": "#149414",
+      "bgcolor": "#008000"
+    },
+    {
+      "id": 115,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -930,
+        910
+      ],
+      "size": [
+        540,
+        440
+      ],
+      "flags": {},
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 245,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "Professional analog film photo,Fashion photography,cinematic lighting,Movie Still,photorealistic,masterpiece,realistic,hyper realistic,high fashion photography of a curvy a naked beautiful young woman,extremely huge plump (sagging soft:1.3) breasts,as a ((firefighter)) with ((ringlets hair)) Donning grunge wear,with flannels and combat boots,reflecting rebellion.,industrial setting,nighttime,artificial lighting,parking area,seated,arm raised,head tilted,eye-level shot,natural lighting,shallow depth of field,beneath the city in the techno catacombs,projection lighting,rim light,iridescent accents,rule of thirds,soft lighting,(slightly above:1.5),shot on FujiFilm X-T4 with Fujinon XF 35mm f-2 R WR,photo by Marta Bevacqua "
+        ],
+        "muted color,Low saturation and low contrast,Abundant shadow details,portrait photography of a beautiful young woman,extremely huge (sagging soft:1.3) breasts,wearing a veil,a delicate piece of fabric that adds mystery and allure,often seen in bridal or ceremonial attire,dressed in white off-shoulder top,white shorts,textured fabric,ruffled sleeves,indoor setting,green plants,dark couch,tiled floor,bright lighting,sitting,facing away,relaxed posture,Eye-level shot,straight angle,centered subject,in a enchanted forest with talking animals and magical creatures,detailed skin pores,rokoko,(fisheyes view:1.4),shot on Pentax 645Z with Pentax-D FA 645 55mm f-2.8,photo by Olive Cotton"
+      ]
+    },
+    {
+      "id": 280,
+      "type": "Reroute",
+      "pos": [
+        320,
+        60
+      ],
+      "size": [
+        100,
+        26
+      ],
+      "flags": {},
+      "order": 101,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 622
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            624,
+            625
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Image After Hires.fix",
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 142,
+      "type": "LoadFlorence2Model",
+      "pos": [
+        320,
+        150
+      ],
+      "size": {
+        "0": 240,
+        "1": 60
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLORENCE2",
+          "type": "FLORENCE2",
+          "links": [
+            357,
+            385,
+            427
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadFlorence2Model"
+      },
+      "widgets_values": [
+        "large"
       ]
     }
   ],
@@ -9865,8 +9865,8 @@
     {
       "title": "Hires.fix",
       "bounding": [
-        590,
-        -894,
+        530,
+        -920,
         2060,
         954
       ],
@@ -9877,8 +9877,8 @@
     {
       "title": "Face Detailer",
       "bounding": [
-        940,
-        130,
+        660,
+        80,
         1440,
         1784
       ],
@@ -9890,9 +9890,9 @@
       "title": "Face Pipe Maker",
       "bounding": [
         -550,
-        140,
-        819,
-        501
+        130,
+        820,
+        374
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -9901,8 +9901,8 @@
     {
       "title": "Hires.fix Switch",
       "bounding": [
-        320,
-        -890,
+        270,
+        -920,
         236,
         410
       ],
@@ -9913,8 +9913,8 @@
     {
       "title": "Face Detailer Switch",
       "bounding": [
-        580,
-        256,
+        320,
+        240,
         310,
         1114
       ],
@@ -9925,8 +9925,8 @@
     {
       "title": "01 - User Input Prompt",
       "bounding": [
-        -2910,
-        426,
+        -1880,
+        390,
         890,
         564
       ],
@@ -9937,8 +9937,8 @@
     {
       "title": "02 - LLM Optimize",
       "bounding": [
-        -2915,
-        1072,
+        -3320,
+        980,
         2328,
         895
       ],
@@ -9949,10 +9949,10 @@
     {
       "title": "Prompt Switch",
       "bounding": [
-        -530,
-        706,
-        700,
-        934
+        -940,
+        670,
+        560,
+        694
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -9961,8 +9961,8 @@
     {
       "title": "Nipple Detailer",
       "bounding": [
-        4290,
-        130,
+        3730,
+        90,
         1480,
         1704
       ],
@@ -9973,7 +9973,7 @@
     {
       "title": "Load  Original Image",
       "bounding": [
-        -1450,
+        -1350,
         -930,
         766,
         1296
@@ -9985,8 +9985,8 @@
     {
       "title": "Hands Detailer",
       "bounding": [
-        2570,
-        130,
+        2170,
+        80,
         1490,
         1724
       ],
@@ -9997,8 +9997,8 @@
     {
       "title": "Generate Hires.fix Info",
       "bounding": [
-        840,
-        -1390,
+        270,
+        -1420,
         1810,
         474
       ],
@@ -10009,8 +10009,8 @@
     {
       "title": "03 - Auto Prompter",
       "bounding": [
-        -1450,
-        2020,
+        -1850,
+        1900,
         860,
         674
       ],
@@ -10021,8 +10021,8 @@
     {
       "title": "04 - Prompt From Image",
       "bounding": [
-        -1970,
-        430,
+        -960,
+        390,
         380,
         204
       ],
@@ -10033,8 +10033,8 @@
     {
       "title": "Original Sampler Info",
       "bounding": [
-        290,
-        -1510,
+        -280,
+        -1540,
         520,
         594
       ],
@@ -10045,8 +10045,8 @@
     {
       "title": "Generate Face Detailer Info",
       "bounding": [
-        940,
-        1946,
+        640,
+        1900,
         1480,
         504
       ],
@@ -10058,10 +10058,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.4665073802097334,
+      "scale": 0.35049389948139253,
       "offset": {
-        "0": -2230.895492274296,
-        "1": 630.0160320345304
+        "0": -318.6702368252947,
+        "1": 1491.1236653155954
       }
     }
   },
