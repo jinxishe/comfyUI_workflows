@@ -1,0 +1,2379 @@
+{
+  "last_node_id": 39,
+  "last_link_id": 75,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -86.08796728784161,
+        -183.1481151637497
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 5,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 6,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7,
+            18
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "type": "PrimitiveNode",
+      "pos": [
+        262.91203271215835,
+        -177.1481151637497
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            11,
+            30
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "end_at_step"
+          }
+        }
+      ],
+      "title": "Refine start step",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        12,
+        "fixed"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        333,
+        123
+      ],
+      "size": {
+        "0": 210,
+        "1": 74
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ckpt_name",
+          "type": "COMBO",
+          "link": 55,
+          "widget": {
+            "name": "ckpt_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            9,
+            17,
+            38
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            2
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Pony\\3x3x3mixxl_v01.safetensors"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        924,
+        -358
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            42,
+            49
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "PrimitiveNode",
+      "pos": [
+        -111,
+        120
+      ],
+      "size": [
+        421.84797063987935,
+        124.14281798152021
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "COMBO",
+          "links": [
+            54,
+            55
+          ],
+          "widget": {
+            "name": "model_name"
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "2D Model Name",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "Pony\\3x3x3mixxl_v01.safetensors",
+        "fixed",
+        ""
+      ]
+    },
+    {
+      "id": 11,
+      "type": "VAEDecode",
+      "pos": [
+        924,
+        129
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 12
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 14,
+      "type": "VAEDecode",
+      "pos": [
+        925,
+        219
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 20
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            36,
+            37
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 5,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        579,
+        124
+      ],
+      "size": {
+        "0": 306.2066650390625,
+        "1": 620.492919921875
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 3
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 8,
+          "widget": {
+            "name": "noise_seed"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 10,
+          "widget": {
+            "name": "steps"
+          },
+          "slot_index": 5
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "link": 11,
+          "widget": {
+            "name": "end_at_step"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            12,
+            34
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        848224425654951,
+        "randomize",
+        30,
+        4,
+        "euler_ancestral",
+        "normal",
+        0,
+        12,
+        "disable"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "PreviewImage",
+      "pos": [
+        930,
+        318
+      ],
+      "size": [
+        455.497325959092,
+        424.9129144353765
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 37
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -106,
+        673
+      ],
+      "size": {
+        "0": 218.39999389648438,
+        "1": 54
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 62,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            3,
+            15,
+            39
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt 2D Encoder",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "scroe_9, score_8_up, score_7_up, score_6_up, score_5_up, \nbest quality, masterpiece, ultra detailed, absurdres,\n\n(shiny skin, fair skin, white skin),\n\nclose-up shot, a young office lady, short hair, glasses, lingerie, stockings, large breasts, Cleavage,\n\nshot from above, seductive,\n"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "Text Multiline",
+      "pos": [
+        -109,
+        779
+      ],
+      "size": {
+        "0": 520.9786987304688,
+        "1": 441.0632629394531
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            61,
+            63
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt 2D",
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "score_6,score_5,score_4,ugly,bad hands, missing fingers, fewer digits, source_furry,source_pony,source_cartoon,logo,text,signature,watermark,bad proportions, bad anatomy, mosaic,\n"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CLIPTextEncode",
+      "pos": [
+        133,
+        671
+      ],
+      "size": {
+        "0": 223.83741760253906,
+        "1": 54
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 63,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4,
+            16,
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt 2D Encoder",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "score_6,score_5,score_4,ugly,bad hands, missing fingers, fewer digits, source_furry,source_pony,source_cartoon,logo,text,signature,watermark,bad proportions, bad anatomy, mosaic,\n"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        -101,
+        1278
+      ],
+      "size": {
+        "0": 315,
+        "1": 826
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 36
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 38
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 39
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 40
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 41
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 42,
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            43,
+            65
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        1,
+        569614324106872,
+        "randomize",
+        10,
+        4,
+        "euler_ancestral",
+        "normal",
+        0.2,
+        "Chess",
+        1024,
+        1024,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 27,
+      "type": "SDPromptSaver",
+      "pos": [
+        251,
+        1289
+      ],
+      "size": {
+        "0": 409.0115051269531,
+        "1": 799.8385620117188
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 65
+        },
+        {
+          "name": "lora_name",
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "model_name",
+          "type": "COMBO",
+          "link": 54,
+          "widget": {
+            "name": "model_name"
+          },
+          "slot_index": 2
+        },
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "link": 56,
+          "widget": {
+            "name": "vae_name"
+          },
+          "slot_index": 3
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 58,
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 59,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "positive",
+          "type": "STRING",
+          "link": 60,
+          "widget": {
+            "name": "positive"
+          },
+          "slot_index": 6
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "link": 61,
+          "widget": {
+            "name": "negative"
+          },
+          "slot_index": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FILENAME",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FILE_PATH",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "METADATA",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDPromptSaver"
+      },
+      "widgets_values": [
+        "%date_%time-%model-%seed-%sampler_%scheduler-%cfg_%steps_2d",
+        "%date/",
+        "Pony\\3x3x3mixxl_v01.safetensors",
+        "sdxl_vae_fp16-fix.safetensors",
+        688378684035160,
+        "randomize",
+        30,
+        4,
+        "euler_ancestral",
+        "normal",
+        1025,
+        1025,
+        "",
+        "",
+        "png",
+        true,
+        true,
+        true,
+        100,
+        "%Y-%m-%d",
+        "%H%M%S",
+        false,
+        ""
+      ]
+    },
+    {
+      "id": 13,
+      "type": "KSampler",
+      "pos": [
+        449,
+        785
+      ],
+      "size": {
+        "0": 315,
+        "1": 446
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 17
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 15
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 16
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 18
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 19,
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 35,
+          "widget": {
+            "name": "steps"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        76620344026958,
+        "randomize",
+        30,
+        4,
+        "euler_ancestral",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "pos": [
+        923,
+        -165
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "link": 57,
+          "widget": {
+            "name": "vae_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            13,
+            21,
+            33,
+            41,
+            48
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "sdxl_vae_fp16-fix.safetensors"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "PrimitiveNode",
+      "pos": [
+        1525,
+        123
+      ],
+      "size": [
+        397.2776080509975,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "COMBO",
+          "links": [
+            67,
+            68
+          ],
+          "widget": {
+            "name": "model_name"
+          },
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "SDXL\\RealitiesEdgeXL_5.safetensors",
+        "fixed",
+        ""
+      ]
+    },
+    {
+      "id": 16,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        1942,
+        130
+      ],
+      "size": [
+        216.70420805099866,
+        92.5038784824477
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ckpt_name",
+          "type": "COMBO",
+          "link": 68,
+          "widget": {
+            "name": "ckpt_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28,
+            45
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            23,
+            24
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "SDXL\\RealitiesEdgeXL_5.safetensors"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "PrimitiveNode",
+      "pos": [
+        531,
+        -196
+      ],
+      "size": [
+        333.15295988957644,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "COMBO",
+          "links": [
+            56,
+            57,
+            69
+          ],
+          "widget": {
+            "name": "vae_name"
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE filename",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "sdxl_vae_fp16-fix.safetensors",
+        "fixed",
+        ""
+      ]
+    },
+    {
+      "id": 8,
+      "type": "Seed Everywhere",
+      "pos": [
+        534.7723433206787,
+        -367.328958747734
+      ],
+      "size": {
+        "0": 315,
+        "1": 124.00000762939453
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            8,
+            19,
+            58,
+            70
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "group_restricted": false,
+        "color_restricted": false,
+        "Node name for S&R": "Seed Everywhere"
+      },
+      "widgets_values": [
+        129081022985811,
+        "randomize",
+        "764962794516621"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "PrimitiveNode",
+      "pos": [
+        259,
+        -346
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            10,
+            35,
+            51,
+            52,
+            53,
+            59,
+            71
+          ],
+          "widget": {
+            "name": "steps"
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "Total steps",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        30,
+        "fixed"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2183,
+        133
+      ],
+      "size": [
+        210,
+        54
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 23
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 73,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            25,
+            46
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt Encoder 3D",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "best quality, masterpiece, ultra detailed, absurdres, Professional analog film photo, Fashion photography, cinematic lighting, Movie Still, photorealistic, masterpiece, realistic,\n\nhyper realistic, HDR, RAW photo,\n\n(shiny skin, fair skin, white skin),\n\nclose-up shot, a young office lady, short hair, glasses, lingerie, stockings, large breasts, Cleavage,\n\nshot from above, seductive,\n\ndetailed depiction, Delicate face and costume details, lifelike appearance HD 16K, cinematic lighting, hyperrealism, Hollywood style, photography, HD Details, Detail Expression, Rich Details,\n"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2419,
+        136
+      ],
+      "size": [
+        239.40778825871303,
+        54
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 24
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 75,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            26,
+            47
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt Encoder 3D",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 20,
+      "type": "VAEDecode",
+      "pos": [
+        2683,
+        136
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 31
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            32,
+            44
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 39,
+      "type": "Text Multiline",
+      "pos": [
+        2090,
+        606
+      ],
+      "size": [
+        792.563795350999,
+        211.0979470315341
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            74,
+            75
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt 3D",
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "cgi, illustration, cartoon, deformed, distorted, disfigured, poorly drawn, bad anatomy, wrong anatomy, ugly, deformed, blurry, Noisy, log, text, watermark, bad hands, missing fingers, extra fingers,\n"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "PreviewImage",
+      "pos": [
+        1517,
+        325
+      ],
+      "size": [
+        497.93538116642935,
+        431.1801470315344
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 32
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 24,
+      "type": "PreviewImage",
+      "pos": [
+        800,
+        1023
+      ],
+      "size": [
+        621.8563259590919,
+        659.685293158519
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 43
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 26,
+      "type": "PreviewImage",
+      "pos": [
+        1504,
+        1002
+      ],
+      "size": [
+        644.6565740741439,
+        713.5872293008192
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 50
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 19,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        2193,
+        869
+      ],
+      "size": {
+        "0": 315,
+        "1": 514
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 28
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 25
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 26
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 34
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 52,
+          "widget": {
+            "name": "noise_seed"
+          }
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 30,
+          "widget": {
+            "name": "start_at_step"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 51,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "link": 53,
+          "widget": {
+            "name": "end_at_step"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        30,
+        "randomize",
+        30,
+        4,
+        "dpmpp_3m_sde",
+        "karras",
+        12,
+        30,
+        "disable"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "SDPromptSaver",
+      "pos": [
+        2545,
+        875
+      ],
+      "size": [
+        400,
+        916.0000610351562
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 66
+        },
+        {
+          "name": "lora_name",
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "model_name",
+          "type": "COMBO",
+          "link": 67,
+          "widget": {
+            "name": "model_name"
+          },
+          "slot_index": 2
+        },
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "link": 69,
+          "widget": {
+            "name": "vae_name"
+          },
+          "slot_index": 3
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 70,
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 71,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "positive",
+          "type": "STRING",
+          "link": 72,
+          "widget": {
+            "name": "positive"
+          },
+          "slot_index": 6
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "link": 74,
+          "widget": {
+            "name": "negative"
+          },
+          "slot_index": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FILENAME",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FILE_PATH",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "METADATA",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDPromptSaver"
+      },
+      "widgets_values": [
+        "%date_%time-%model-%seed-%sampler_%scheduler-%cfg_%steps_3d",
+        "%date/",
+        "SDXL\\RealitiesEdgeXL_5.safetensors",
+        "sdxl_vae_fp16-fix.safetensors",
+        999020178994745,
+        "randomize",
+        30,
+        4,
+        "dpmpp_3m_sde",
+        "karras",
+        1025,
+        1025,
+        "",
+        "",
+        "png",
+        true,
+        true,
+        true,
+        100,
+        "%Y-%m-%d",
+        "%H%M%S",
+        false,
+        ""
+      ]
+    },
+    {
+      "id": 25,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        2974,
+        878
+      ],
+      "size": [
+        315,
+        826.0000305175781
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 44
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 45
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 46
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 47
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 48
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50,
+            66
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        1,
+        606217290385957,
+        "randomize",
+        30,
+        5.5,
+        "dpmpp_3m_sde",
+        "karras",
+        0.2,
+        "Chess",
+        1024,
+        1024,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 32,
+      "type": "Text Multiline",
+      "pos": [
+        -109,
+        297
+      ],
+      "size": {
+        "0": 672.276123046875,
+        "1": 325.0706481933594
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            60,
+            62
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt 2D",
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "scroe_9, score_8_up, score_7_up, score_6_up, score_5_up, \nbest quality, masterpiece, ultra detailed, absurdres,\n\n(shiny skin, fair skin, white skin),\n\na young office lady, short hair, glasses, lingerie, stockings, large breasts, Cleavage,\n\nshot from above, seductive,\n"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "Text Multiline",
+      "pos": [
+        2096,
+        271
+      ],
+      "size": [
+        791.5877882587138,
+        290.5839399392496
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            72,
+            73
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt 3D",
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "best quality, masterpiece, ultra detailed, absurdres, Professional analog film photo, Fashion photography, cinematic lighting, Movie Still, photorealistic, masterpiece, realistic,\n\nhyper realistic, HDR, RAW photo,\n\n(shiny skin, fair skin, white skin),\n\na young office lady, short hair, glasses, lingerie, stockings, large breasts, Cleavage,\n\nshot from above, seductive,\n\ndetailed depiction, Delicate face and costume details, lifelike appearance HD 16K, cinematic lighting, hyperrealism, Hollywood style, photography, HD Details, Detail Expression, Rich Details,\n"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "SDXLResolutionPresets",
+      "pos": [
+        -88.08796728784161,
+        -353.14811516374954
+      ],
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            5
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLResolutionPresets"
+      },
+      "widgets_values": [
+        "3:2 (1216x832)",
+        "Vertical"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      1,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      1,
+      1,
+      4,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      3,
+      0,
+      5,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      7,
+      0,
+      6,
+      0,
+      "INT"
+    ],
+    [
+      6,
+      7,
+      1,
+      6,
+      1,
+      "INT"
+    ],
+    [
+      7,
+      6,
+      0,
+      5,
+      3,
+      "LATENT"
+    ],
+    [
+      8,
+      8,
+      0,
+      5,
+      4,
+      "INT"
+    ],
+    [
+      9,
+      1,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      9,
+      0,
+      5,
+      5,
+      "INT"
+    ],
+    [
+      11,
+      10,
+      0,
+      5,
+      6,
+      "INT"
+    ],
+    [
+      12,
+      5,
+      0,
+      11,
+      0,
+      "LATENT"
+    ],
+    [
+      13,
+      2,
+      0,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      15,
+      3,
+      0,
+      13,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      4,
+      0,
+      13,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      1,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      18,
+      6,
+      0,
+      13,
+      3,
+      "LATENT"
+    ],
+    [
+      19,
+      8,
+      0,
+      13,
+      4,
+      "INT"
+    ],
+    [
+      20,
+      13,
+      0,
+      14,
+      0,
+      "LATENT"
+    ],
+    [
+      21,
+      2,
+      0,
+      14,
+      1,
+      "VAE"
+    ],
+    [
+      23,
+      16,
+      1,
+      17,
+      0,
+      "CLIP"
+    ],
+    [
+      24,
+      16,
+      1,
+      18,
+      0,
+      "CLIP"
+    ],
+    [
+      25,
+      17,
+      0,
+      19,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      26,
+      18,
+      0,
+      19,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      28,
+      16,
+      0,
+      19,
+      0,
+      "MODEL"
+    ],
+    [
+      30,
+      10,
+      0,
+      19,
+      5,
+      "INT"
+    ],
+    [
+      31,
+      19,
+      0,
+      20,
+      0,
+      "LATENT"
+    ],
+    [
+      32,
+      20,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      33,
+      2,
+      0,
+      20,
+      1,
+      "VAE"
+    ],
+    [
+      34,
+      5,
+      0,
+      19,
+      3,
+      "LATENT"
+    ],
+    [
+      35,
+      9,
+      0,
+      13,
+      5,
+      "INT"
+    ],
+    [
+      36,
+      14,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      14,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      1,
+      0,
+      22,
+      1,
+      "MODEL"
+    ],
+    [
+      39,
+      3,
+      0,
+      22,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      40,
+      4,
+      0,
+      22,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      41,
+      2,
+      0,
+      22,
+      4,
+      "VAE"
+    ],
+    [
+      42,
+      23,
+      0,
+      22,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      43,
+      22,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      20,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      45,
+      16,
+      0,
+      25,
+      1,
+      "MODEL"
+    ],
+    [
+      46,
+      17,
+      0,
+      25,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      47,
+      18,
+      0,
+      25,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      48,
+      2,
+      0,
+      25,
+      4,
+      "VAE"
+    ],
+    [
+      49,
+      23,
+      0,
+      25,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      50,
+      25,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      51,
+      9,
+      0,
+      19,
+      6,
+      "INT"
+    ],
+    [
+      52,
+      9,
+      0,
+      19,
+      4,
+      "INT"
+    ],
+    [
+      53,
+      9,
+      0,
+      19,
+      7,
+      "INT"
+    ],
+    [
+      54,
+      29,
+      0,
+      27,
+      2,
+      "COMBO"
+    ],
+    [
+      55,
+      29,
+      0,
+      1,
+      0,
+      "COMBO"
+    ],
+    [
+      56,
+      30,
+      0,
+      27,
+      3,
+      "COMBO"
+    ],
+    [
+      57,
+      30,
+      0,
+      2,
+      0,
+      "COMBO"
+    ],
+    [
+      58,
+      8,
+      0,
+      27,
+      4,
+      "INT"
+    ],
+    [
+      59,
+      9,
+      0,
+      27,
+      5,
+      "INT"
+    ],
+    [
+      60,
+      32,
+      0,
+      27,
+      6,
+      "STRING"
+    ],
+    [
+      61,
+      33,
+      0,
+      27,
+      7,
+      "STRING"
+    ],
+    [
+      62,
+      32,
+      0,
+      3,
+      1,
+      "STRING"
+    ],
+    [
+      63,
+      33,
+      0,
+      4,
+      1,
+      "STRING"
+    ],
+    [
+      65,
+      22,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      25,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      67,
+      37,
+      0,
+      28,
+      2,
+      "COMBO"
+    ],
+    [
+      68,
+      37,
+      0,
+      16,
+      0,
+      "COMBO"
+    ],
+    [
+      69,
+      30,
+      0,
+      28,
+      3,
+      "COMBO"
+    ],
+    [
+      70,
+      8,
+      0,
+      28,
+      4,
+      "INT"
+    ],
+    [
+      71,
+      9,
+      0,
+      28,
+      5,
+      "INT"
+    ],
+    [
+      72,
+      38,
+      0,
+      28,
+      6,
+      "STRING"
+    ],
+    [
+      73,
+      38,
+      0,
+      17,
+      1,
+      "STRING"
+    ],
+    [
+      74,
+      39,
+      0,
+      28,
+      7,
+      "STRING"
+    ],
+    [
+      75,
+      39,
+      0,
+      18,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "2D",
+      "bounding": [
+        -135,
+        48,
+        1590,
+        2081
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "3D",
+      "bounding": [
+        1494,
+        49,
+        1805,
+        1752
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "Common",
+      "bounding": [
+        -98,
+        -441,
+        1407,
+        375
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7513148009015799,
+      "offset": [
+        186.58777416483858,
+        26.998406585022504
+      ]
+    }
+  },
+  "version": 0.4
+}

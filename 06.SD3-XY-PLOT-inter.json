@@ -1,0 +1,816 @@
+{
+  "last_node_id": 138,
+  "last_link_id": 176,
+  "nodes": [
+    {
+      "id": 47,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        252.93341674804688,
+        952
+      ],
+      "size": {
+        "0": 423.9964294433594,
+        "1": 98
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            163
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "SD3\\stableDiffusion3SD3_sd3Medium.safetensors"
+      ]
+    },
+    {
+      "id": 130,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        708.9334167480469,
+        955
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            164
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3"
+      },
+      "widgets_values": [
+        3
+      ]
+    },
+    {
+      "id": 11,
+      "type": "CLIPTextEncode",
+      "pos": [
+        705.9334167480469,
+        1075
+      ],
+      "size": {
+        "0": 676.463134765625,
+        "1": 144.74000549316406
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 169
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            8
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a beautiful young woman,"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "CLIPTextEncode",
+      "pos": [
+        702.9334167480469,
+        1277
+      ],
+      "size": {
+        "0": 324.0631408691406,
+        "1": 124.67337036132812
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            9
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 131,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        1059.933416748047,
+        1285
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            165
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 16,
+      "type": "VAEDecode",
+      "pos": [
+        1776.933416748047,
+        946
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 14
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            125
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 17,
+      "type": "VAELoader",
+      "pos": [
+        1776.933416748047,
+        1063
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "sd3VAE_v10.safetensors"
+      ]
+    },
+    {
+      "id": 136,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1443,
+        357
+      ],
+      "size": {
+        "0": 210,
+        "1": 76.00000762939453
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 171,
+          "dir": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 137,
+      "type": "CR Float To Integer",
+      "pos": [
+        1433,
+        497
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "_float",
+          "type": "FLOAT",
+          "link": 172,
+          "widget": {
+            "name": "_float"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            174,
+            176
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Float To Integer"
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 138,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        1435,
+        531
+      ],
+      "size": {
+        "0": 210,
+        "1": 86.67337036132812
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "INT",
+          "link": 174,
+          "widget": {
+            "name": "input"
+          },
+          "dir": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 134,
+      "type": "TripleCLIPLoader",
+      "pos": [
+        256.93341674804685,
+        1107
+      ],
+      "size": {
+        "0": 412.66314697265625,
+        "1": 106
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            169,
+            170
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TripleCLIPLoader"
+      },
+      "widgets_values": [
+        "stableDiffusion3SD3_textEncoderClipG.safetensors",
+        "stableDiffusion3SD3_textEncoderClipL.safetensors",
+        "stableDiffusion3SD3_textEncoderT5E4m3fn.safetensors"
+      ]
+    },
+    {
+      "id": 88,
+      "type": "PrimitiveNode",
+      "pos": [
+        752.733154296875,
+        393.2666618347168
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            150
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "index"
+          }
+        }
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        43,
+        "increment"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "SaveImage",
+      "pos": [
+        2119.933416748047,
+        944
+      ],
+      "size": {
+        "0": 409.39642333984375,
+        "1": 500.8733825683594
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 125
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "Test_cfg_scheduler/CR"
+      ]
+    },
+    {
+      "id": 124,
+      "type": "CR XY Interpolate",
+      "pos": [
+        1060.733154296875,
+        391.2666618347168
+      ],
+      "size": {
+        "0": 320,
+        "1": 350
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "INT",
+          "link": 150,
+          "widget": {
+            "name": "index"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "X",
+          "type": "FLOAT",
+          "links": [
+            171,
+            175
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "Y",
+          "type": "FLOAT",
+          "links": [
+            172
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "x_annotation",
+          "type": "STRING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "y_annotation",
+          "type": "STRING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "trigger",
+          "type": "BOOLEAN",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR XY Interpolate"
+      },
+      "widgets_values": [
+        7,
+        3,
+        1,
+        "",
+        6,
+        15,
+        5,
+        "",
+        43,
+        "Lerp"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "KSampler",
+      "pos": [
+        1426.933416748047,
+        949
+      ],
+      "size": {
+        "0": 320,
+        "1": 470
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 164
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 8
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 9
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 165
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 175,
+          "widget": {
+            "name": "cfg"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 176,
+          "widget": {
+            "name": "steps"
+          },
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        32603574575332,
+        "fixed",
+        20,
+        8,
+        "euler",
+        "sgm_uniform",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      8,
+      11,
+      0,
+      13,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      9,
+      12,
+      0,
+      13,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      13,
+      0,
+      16,
+      0,
+      "LATENT"
+    ],
+    [
+      15,
+      17,
+      0,
+      16,
+      1,
+      "VAE"
+    ],
+    [
+      125,
+      16,
+      0,
+      101,
+      0,
+      "IMAGE"
+    ],
+    [
+      150,
+      88,
+      0,
+      124,
+      0,
+      "INT"
+    ],
+    [
+      163,
+      47,
+      0,
+      130,
+      0,
+      "MODEL"
+    ],
+    [
+      164,
+      130,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      165,
+      131,
+      0,
+      13,
+      3,
+      "LATENT"
+    ],
+    [
+      169,
+      134,
+      0,
+      11,
+      0,
+      "CLIP"
+    ],
+    [
+      170,
+      134,
+      0,
+      12,
+      0,
+      "CLIP"
+    ],
+    [
+      171,
+      124,
+      0,
+      136,
+      0,
+      "*"
+    ],
+    [
+      172,
+      124,
+      1,
+      137,
+      0,
+      "FLOAT"
+    ],
+    [
+      174,
+      137,
+      0,
+      138,
+      0,
+      "INT"
+    ],
+    [
+      175,
+      124,
+      0,
+      13,
+      4,
+      "FLOAT"
+    ],
+    [
+      176,
+      137,
+      0,
+      13,
+      5,
+      "INT"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Workflow",
+      "bounding": [
+        221,
+        861,
+        2329,
+        605
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "XY Interpolation",
+      "bounding": [
+        728,
+        297,
+        1466,
+        530
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9090909090909091,
+      "offset": [
+        -155.79655944824162,
+        -168.1398779296875
+      ]
+    }
+  },
+  "version": 0.4
+}
